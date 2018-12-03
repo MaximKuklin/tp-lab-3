@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 
 #include "DateTime.h"
 
@@ -22,10 +21,10 @@ string createStr(time_t a)
 
 	DateTime::DateTime(int d, int m, int y)
 	{
-		time_t tempSec; //ïğåìåííàÿ äëÿ õğàíåíèÿ ñåêóíä 
-		time(&tempSec); //ñòàâèì íàñòîÿùåå âğåìÿ
-		tm *temp = localtime(&tempSec); // ñîçäàåì ñòğóêòóğó äàòû
-		//ìåíÿåì ñòğóêòóğó ïîä âõîäíûå äàííûå
+		time_t tempSec; //Ã¯Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã Ã¿ Ã¤Ã«Ã¿ ÃµÃ°Ã Ã­Ã¥Ã­Ã¨Ã¿ Ã±Ã¥ÃªÃ³Ã­Ã¤ 
+		time(&tempSec); //Ã±Ã²Ã Ã¢Ã¨Ã¬ Ã­Ã Ã±Ã²Ã®Ã¿Ã¹Ã¥Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿
+		tm *temp = localtime(&tempSec); // Ã±Ã®Ã§Ã¤Ã Ã¥Ã¬ Ã±Ã²Ã°Ã³ÃªÃ²Ã³Ã°Ã³ Ã¤Ã Ã²Ã»
+		//Ã¬Ã¥Ã­Ã¿Ã¥Ã¬ Ã±Ã²Ã°Ã³ÃªÃ²Ã³Ã°Ã³ Ã¯Ã®Ã¤ Ã¢ÃµÃ®Ã¤Ã­Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥
 		temp->tm_mday = d;
 		temp->tm_mon = m - 1;
 		temp->tm_year = y - 1900;
