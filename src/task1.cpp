@@ -25,7 +25,7 @@ double calcCost()
 	Circle pool(3);
 	Circle track(4);
 	double cost;
-	cost = 1000 * ((track.getArea()/pi)*3.1415 - (pool.getArea()/pi)*3.1415) + 2000 * (track.getFerence()/pi)*3.1415;
+	cost = round(1000 * ((track.getArea()/pi)*3.1415 - (pool.getArea()/pi)*3.1415) + 2000 * (track.getFerence()/pi)*3.14);
 	return cost;
 }
 
